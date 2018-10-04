@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+
+	<h1> Social Page </h1>
+  <div class="socials"></div>
+	{% for post in social %}
+	<div class="social"></div>
+	<h2> <a href="{% url 'socio:detail' slug=post.slug %}">{{post.title}} </a> </h2>
+    <p> {{post.snippet}}</p>
+    <p> {{post.date}} </p>
+
+    </div>
+    {% endfor %}
+   </div> 
+{% endblock %}

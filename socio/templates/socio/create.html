@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<div class="create-socio">
+	<h1> New Post adding page </h1>
+
+  <form class='site-form' action="{% url 'socio:create' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{form}}
+   <input type="submit" value="Create">
+  </form>
+  </div>
+{% endblock %}
